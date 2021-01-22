@@ -18,8 +18,7 @@ Este bot foi criado com as seguintes libs:
 
 # Instalação:
 
-execute no terminal o comando: python install.py ou python3 install.py
-Essa execução do script irá instalar as bibliotecas necessárias...
+A instalação dos modules é feita pelo comando: pip install -r requirements.txt ou pip3 install -r requirements.txt
 
 # Comandos disponíveis:
 
