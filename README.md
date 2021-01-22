@@ -24,6 +24,7 @@ A instalação dos modules é feita pelo comando: pip install -r requirements.tx
 
 - "lua que dia é hoje";
 - "lua que horas são";
+- "lua qual é o clima em {cidade}"
 
 O COMANDO ABAIXO PRECISA NECESSARIAMENTE SER IGUAL:
 
