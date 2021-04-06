@@ -1,6 +1,6 @@
 <center> <h1> lua-bot </h1> <center>
 
-<img src="./github/icone.ico" alt="LUA_BOT" width="100">
+<center> <img src="./github/icone.ico" alt="LUA_BOT" width="100"> <center>
 <br>
 <br>
 
