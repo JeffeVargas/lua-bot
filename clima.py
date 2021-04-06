@@ -1,5 +1,5 @@
 from selenium import webdriver
-from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
@@ -13,24 +13,15 @@ def talk(text):
     engine.say(text)
     engine.runAndWait()
 
-class weather():
+def weather(city):
+    
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    city = city.replace(' ', '+')
+    driver.get('https://www.google.com/search?q=' + city)
 
-    def __init__(self, city):
-        
-        self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        self.name = city
-        self.driver.get('https://www.google.com')
-        bar = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, '//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input'))
-        )
-        bar.click()
-        bar.send_keys(city, Keys.ENTER)
-
-        temperature = self.driver.find_element_by_id('wob_tm').text
-        rain = self.driver.find_element_by_id('wob_pp').text
-        humity = self.driver.find_element_by_id('wob_hm').text
-        wind = self.driver.find_element_by_id('wob_ws').text
-
-        talk('A temperatura é de {} graus, precipitação de chuva de {}, umidade de {} e ventos à {}'.format(temperature, rain, humity, wind))
-
-        self.driver.quit()
+    temperature = driver.find_element_by_id('wob_tm').text
+    rain = driver.find_element_by_id('wob_pp').text
+    humity = driver.find_element_by_id('wob_hm').text
+    wind = driver.find_element_by_id('wob_ws').text
+    talk('A temperatura é de {} graus, precipitação de chuva de {}, umidade igual {} e ventos {}'.format(temperature, rain, humity, wind))
+    driver.quit()
