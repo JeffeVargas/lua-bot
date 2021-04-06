@@ -33,7 +33,6 @@ def listen(m):
 
 def tratamento(voice):
     trat_voice = voice.replace('lua', '')
-    print(trat_voice)
     call_command(trat_voice)
 
 def call_command(trat_voice):
