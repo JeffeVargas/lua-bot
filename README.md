@@ -30,9 +30,15 @@
 - calendar
 - datetime
 
+#
+
 <h2> Instação dos requisitos </h2>
 
 <p> A instalação dos modules é feita pelo comando: pip install -r requirements.txt ou pip3 install -r requirements.txt </p>
+
+<img src="./github/requirements.gif" alt="INSTALATION">
+
+#
 
 <h1> Comandos disponíveis: </h1>
 
