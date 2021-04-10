@@ -5,14 +5,14 @@ from horario import horas
 from dia import dia
 from dollar import doll
 from crypto import bat
-from clima import weather
+from clima import findcity
 
 keywords = ['dia', 'horas', 'dólar', 'clima', 'bat']
 functions = {
     'dia': dia,
     'horas': horas,
     'dólar': doll,
-    'clima': weather,
+    'clima': findcity,
     'bat': bat
 }
 
@@ -38,7 +38,7 @@ def tratamento(voice):
 def call_command(trat_voice):
     for i in keywords:
         if 'clima' in trat_voice:
-            functions['clima'](city=trat_voice)
+            functions['clima'](trat_voice=trat_voice)
             break
 
         if i in trat_voice:
