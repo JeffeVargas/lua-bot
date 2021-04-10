@@ -1,6 +1,7 @@
 import requests
 import json
 import pyttsx3 as p
+from config import api_key
 
 engine = p.init()
 keywords = ['qual', 'é o', 'clima', 'em']
@@ -29,7 +30,7 @@ def findcity(trat_voice):
             break
 
 def getClimaByCidade(city_id, city_name):
-    requisicao = requests.get(f'https://api.openweathermap.org/data/2.5/weather?id='+str(city_id)+'&appid=2e90af7d6eb49160c7517d97f94ebf4a')
+    requisicao = requests.get(f'https://api.openweathermap.org/data/2.5/weather?id='+str(city_id)+'&appid=' + api_key )
     
     jsonResults = json.loads(str(requisicao.text))
 
