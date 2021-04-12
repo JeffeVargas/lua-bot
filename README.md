@@ -1,14 +1,17 @@
-<center> <h1> lua-bot </h1> <center>
+#
+<h1 align="center"> LUA
 
-<center> <img src="./github/icone.ico" alt="LUA_BOT" width="100"> <center>
-<br>
-<br>
+<center> <img src="./github/lua_ico.png" alt="LUA_BOT"> <center>
 
-<p align="center"> 😁🤖 This is a voice bot made in python to you get more facility in your flow. Her name is lua, and can give you information, jokes and a better day! 😁🤖</p>
+</h1>
+
+<p align="center"> 
+
+Olá, eu sou a <b>LUA!</b> Sou uma <b>assistente pessoal</b> que foi desenvolvida para <b>melhorar</b> sua <b>vida</b> e o seu <b> workflow</b>
+
+</p>
 
 <img src="./github/gif_lua.gif" alt="Clima">
-
-#
 
 <h1> Libs </h1> 
 
