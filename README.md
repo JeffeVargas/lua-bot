@@ -41,6 +41,15 @@ Olá, eu sou a <b>LUA!</b> Sou uma <b>assistente pessoal</b> que foi desenvolvid
 
 <img src="./github/requirements.gif" alt="INSTALATION">
 
+<p align="center"> 
+  Caso a instalação do PyAudio esteja dando erro. Uma possível solução é instalar ele da seguinte forma:
+
+- pip install pipwin
+- pipwin install pyaudio
+
+Após estes passos, você deve conseguir usar a LUA.
+
+</p>
 #
 
 <h1> Comandos disponíveis: </h1>
