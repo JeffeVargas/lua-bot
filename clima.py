@@ -44,7 +44,8 @@ def getClimaByCidade(city_id, city_name):
         temperaturaResultado = str(jsonResults['main']['temp'])
         velocidadeventos = str(jsonResults['wind']['speed'])
 
-        talk(f'O clima em {cidadeResultado} - {(paisResultado).upper()} é de {temperaturaResultado[0:2]} graus e ventos a {velocidadeventos[0:2]} km/h')
+        talk(f'O clima em {cidadeResultado} - {(paisResultado).upper()} é de {temperaturaResultado[0:2]} graus e ventos a {velocidadeventos[0:2]} kilometros por hora')
+        print(f'O clima em {cidadeResultado} - {(paisResultado).upper()} é de {temperaturaResultado[0:2]} graus e ventos a {velocidadeventos[0:2]} km/h')
 
     except:
         talk('Informações não encontradas')

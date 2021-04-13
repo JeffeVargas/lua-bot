@@ -1,65 +1,61 @@
-#
-<h1 align="center"> LUA
+<center> <img src="./github/titulo_lua.png">
 
-<center> <img src="./github/lua_ico.png" alt="LUA_BOT"> <center>
-
-</h1>
+<center> <img src="./github/lua_branca_ico.png" alt="LUA_BOT"> <center>
 
 <p align="center"> 
 
-Olá, eu sou a <b>LUA!</b> Sou uma <b>assistente pessoal</b> que foi desenvolvida para <b>melhorar</b> sua <b>vida</b> e o seu <b> workflow</b>
+Hi, I'm <b>LUA!</b> and I'm your <b>personal assistent</b> that was developed to you get a <b>better</b> <b>life</b> and imporve your <b> workflow</b>
 
 </p>
 
-<img src="./github/gif_lua.gif" alt="Clima">
+<img src="./github/clima.gif" alt="Clima">
 
-<h1> Libs </h1> 
+<h1 align=left> <b>Feautures</b></h1>
 
-<h3> Installed by pip </h3>
+* 💻 **Speech_Recognition** - Used to transcribe your voice.
+* 📢 **Pyttsx3** - Used to LUA answar your questions.
+* 🎤 **Pyaudio** - Used to get your microphone infos.
+* **Requests** - Used to do web requests.
 
-- Speech_Recognition (https://pypi.org/project/SpeechRecognition/)
-- Pyttsx3 (https://pypi.org/project/pyttsx3/)
-- Selenium (https://pypi.org/project/selenium/)
-- Pyaudio (https://pypi.org/project/PyAudio/)
-- WebDriverManager (https://pypi.org/project/webdriver-manager/)
-- requests (https://pypi.org/project/requests/)
-- BS4 (https://pypi.org/project/bs4/)
+> Essas são as bibliotecas que mais se destacam no código.
 
-#
 
-<h1> Libs do próprio Python: </h1>
+<h1 align=left> <b> Getting Started </b> </h1>
 
-- os
-- calendar
-- datetime
+1. Clone this repo using `git clone https://github.com/JeffeVargas/lua-bot.git`
 
-#
+2. Move yourself to appropriate directory: `cd lua-bot`
 
-<h2> Instação dos requisitos </h2>
+3. Run `pip install -r requirements.txt`
+> If you're in linux, probability that will be `pip3 install -r requirements`
 
-<p> A instalação dos modules é feita pelo comando: pip install -r requirements.txt ou pip3 install -r requirements.txt </p>
+<h2> PyAudio error on Windows: <h2>
+
+> If you got error with **PyAudio** when installed on **WINDOWS**, try to run this commands below:
+1. Run `pip install pipwin`
+2. Run `pipwin install pyaudio`
+>Your problem should be solved.
+
+<h2> PyAudio error on Linux: </h2>
+
+> If you got same error mentioned above, but you're on **LINUX**, try to run this commands bellow:
+1. Run `sudo apt-get update`
+2. Run `sudo apt-get install espeak`
+>Your problem should be solved.
 
 <img src="./github/requirements.gif" alt="INSTALATION">
 
-<p align="center"> 
-  Caso a instalação do PyAudio esteja dando erro. Uma possível solução é instalar ele da seguinte forma:
+<h1 align=left> <b>Avaliable Commands:</b> </h1>
 
-- pip install pipwin
-- pipwin install pyaudio
+> Portuguese Version:
 
-Após estes passos, você deve conseguir usar a LUA.
-
-</p>
-#
-
-<h1> Comandos disponíveis: </h1>
-
-- "lua que dia é hoje"; 📅
+> Versão em Português Brasil:
+* "lua que dia é hoje"; 📅
 - "lua que horas são"; ⌚
 - "lua qual é o clima em {cidade}" ☁
 - "Qual é o preço do dólar" 💵
 - "Qual é o preço do bat" 🦇
 
-Obs: BAT é uma função bonus para quem usa o Brave.
+> BAT é uma função bonus para quem usa o Brave.
 
-<p> Obrigado por ler até aqui, espero que tenha compreendido e gostado da lua. Nos veremos em uma próxima atualização! </p>
+<p> Thank you for reading this far, I hope that you understood and liked LUA. We'll see in an upcoming update! </p>

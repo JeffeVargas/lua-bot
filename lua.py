@@ -19,6 +19,11 @@ functions = {
 remove = 'lua'
 r = sr.Recognizer()
 m = sr.Microphone()
+engine = p.init()
+
+def talk(text):
+    engine.say(text)
+    engine.runAndWait()
 
 def listen(m):
     with m as source:
@@ -29,7 +34,7 @@ def listen(m):
         if 'lua' in voice:
             tratamento(voice)
     except sr.UnknownValueError:
-        print('Erro desconhecido')
+        print('Não consegui te entender. Por favor, poderia repetir?')
 
 def tratamento(voice):
     trat_voice = voice.replace('lua', '')
@@ -40,10 +45,17 @@ def call_command(trat_voice):
         if 'clima' in trat_voice:
             functions['clima'](trat_voice=trat_voice)
             break
+        else:
+            talk('Comando não encontrado... Tente algum comando válido')
+            print('Comando não encontrado... Tente algum comando válido')
+            break
 
         if i in trat_voice:
             functions[i]()
-
+        else:
+            talk('Comando não encontrado... Tente algum comando válido')
+            print('Comando não encontrado... Tente algum comando válido')
+            break
 
 while True:
     listen(m)
