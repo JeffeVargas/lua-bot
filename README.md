@@ -1,6 +1,6 @@
-<center> <img src="./github/titulo_lua.png">
+<img align="right" src="./github/titulo_lua.png">
 
-<center> <img src="./github/lua_branca_ico.png" alt="LUA_BOT"> <center>
+<img align="right" src="./github/lua_branca_ico.png" alt="LUA_BOT">
 
 <p align="center"> 
 
@@ -13,7 +13,7 @@ Hi, I'm <b>LUA!</b> and I'm your <b>personal assistent</b> that was developed to
 <h1 align=left> <b>Feautures</b></h1>
 
 * 💻 **Speech_Recognition** - Used to transcribe your voice.
-* 📢 **Pyttsx3** - Used to LUA answar your questions.
+* 📢 **Pyttsx3** - Used to LUA answer your questions.
 * 🎤 **Pyaudio** - Used to get your microphone infos.
 * **Requests** - Used to do web requests.
 

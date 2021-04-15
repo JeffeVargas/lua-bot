@@ -9,8 +9,8 @@ def talk(text):
     engine.say(text)
     engine.runAndWait()
 
-def dia():
-    list_mes = {
+def day():
+    month_list = {
         'January' : 'Janeiro',
         'February' : 'Fevereiro',
         'March' : 'Março',
@@ -24,7 +24,7 @@ def dia():
         'November' : 'Novembro',
         'December' : 'Dezembro'
     }
-    list_semana = {
+    week_list = {
         'Monday' : 'Segunda-feira',
         'Tuesday' : 'Terça-feira',
         'Wednesday' : 'Quarta-feira',
@@ -34,9 +34,9 @@ def dia():
         'Sunday' : 'Domingo'
     }
     time = datetime.datetime.now()
-    ano = time.strftime('%Y')
-    mes = time.strftime('%B')
-    semana = time.strftime('%A')
-    dia = time.strftime('%d')
+    year = time.strftime('%Y')
+    month = time.strftime('%B')
+    week = time.strftime('%A')
+    today = time.strftime('%d')
 
-    talk(f'{list_semana[semana]}, dia {dia} do mês de {list_mes[mes]} e do ano de {ano}')
+    talk(f'{week_list[week]}, dia {today} do mês de {month_list[month]} e do ano de {year}')

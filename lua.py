@@ -1,22 +1,20 @@
 import speech_recognition as sr
 import pyttsx3 as p
 import time
-from horario import horas
-from dia import dia
-from dollar import doll
-from crypto import bat
+from horario import hours
+from dia import day
 from clima import findcity
+import inspect
 
-keywords = ['dia', 'horas', 'dólar', 'clima', 'bat']
+keywords = ['dia', 'horas', 'clima']
 functions = {
-    'dia': dia,
-    'horas': horas,
-    'dólar': doll,
-    'clima': findcity,
-    'bat': bat
+    'dia': day,
+    'horas': hours,
+    'clima': findcity
 }
 
 remove = 'lua'
+
 r = sr.Recognizer()
 m = sr.Microphone()
 engine = p.init()
@@ -37,25 +35,24 @@ def listen(m):
         print('Não consegui te entender. Por favor, poderia repetir?')
 
 def tratamento(voice):
-    trat_voice = voice.replace('lua', '')
-    call_command(trat_voice)
+    remove_cmd = voice.replace('lua', '')
+    trat_voice = remove_cmd.split()
+    call_command(trat_voice, remove_cmd)
 
-def call_command(trat_voice):
-    for i in keywords:
-        if 'clima' in trat_voice:
-            functions['clima'](trat_voice=trat_voice)
-            break
-        else:
-            talk('Comando não encontrado... Tente algum comando válido')
-            print('Comando não encontrado... Tente algum comando válido')
-            break
-
-        if i in trat_voice:
-            functions[i]()
-        else:
-            talk('Comando não encontrado... Tente algum comando válido')
-            print('Comando não encontrado... Tente algum comando válido')
-            break
+def call_command(trat_voice, remove_cmd):
+    for command in keywords:
+        if command in trat_voice:
+            select_key =  command
+            arguments = inspect.getfullargspec(functions[select_key]).args
+            arguments_length = len(arguments)
+            
+            if arguments_length >= 1:
+                functions[select_key](remove_cmd)
+            elif arguments_length == 0:
+                functions[select_key]()
+            else:
+                talk('Comando não encontrado... Por favor, tente novamente')
+                print('Comando não encontrado... Por favor, tente novamente')
 
 while True:
     listen(m)

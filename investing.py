@@ -6,6 +6,8 @@ from bs4 import BeautifulSoup
 
 class CrawlerInvesting:
 	def __init__(self):
+		self.header = self.getHeaderInvesting()
+
 		nomeCriptoMoeda = str(sys.argv[-1])
 		if '.py' in nomeCriptoMoeda:
 			self.sendLogToSystem('ERROR', 'Syntax de execução incorreta. Correta : python investing.py "Nome Criptomoeda"')
@@ -18,11 +20,10 @@ class CrawlerInvesting:
 	def sendLogToSystem(self, type_message, message):
 		print (f'[ {type_message} ] {message}')
 
-    def getCritoMoeda(self, nomeCriptoMoeda):
-        nomeCriptoMoedaURL = nomeCriptoMoeda.lower()
-        nomeCriptoMoedaURL = nomeCriptoMoeda.replace(' ','-')
+	def getCritoMoeda(self, nomeCriptoMoeda):
+		nomeCriptoMoedaURL = nomeCriptoMoeda.replace(' ','-')
 
-		urlCriptoMoeda = 'https://br.investing.com/crypto/' + nomeCriptoMoedaURL
+		urlCriptoMoeda = 'https://br.investing.com/crypto/{}'.format(nomeCriptoMoedaURL)
 
 		requisicaoCriptoMoeda = requests.get(urlCriptoMoeda, headers=self.header)
 		if requisicaoCriptoMoeda.status_code == 200:

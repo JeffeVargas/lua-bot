@@ -9,7 +9,7 @@ def talk(text):
     engine.say(text)
     engine.runAndWait()
 
-def horas():
+def hours():
     time = datetime.datetime.now()
     time = time.strftime('%H:%M')
     talk(f'Agora são {time}')
