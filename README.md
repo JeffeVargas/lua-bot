@@ -53,9 +53,6 @@ Hi, I'm <b>LUA!</b> and I'm your <b>personal assistent</b> that was developed to
 * "lua que dia é hoje"; 📅
 - "lua que horas são"; ⌚
 - "lua qual é o clima em {cidade}" ☁
-- "Qual é o preço do dólar" 💵
-- "Qual é o preço do bat" 🦇
 
-> BAT é uma função bonus para quem usa o Brave.
 
 <p> Thank you for reading this far, I hope that you understood and liked LUA. We'll see in an upcoming update! </p>
