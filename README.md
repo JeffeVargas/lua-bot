@@ -29,7 +29,7 @@ Hi, I'm <b>LUA!</b> and I'm your <b>personal assistent</b> that was developed to
 3. Run `pip install -r requirements.txt`
 > If you're in linux, probability that will be `pip3 install -r requirements`
 
-<h2> PyAudio error on Windows: <h2>
+<h2> PyAudio error on Windows: </h2>
 
 > If you got error with **PyAudio** when installed on **WINDOWS**, try to run this commands below:
 1. Run `pip install pipwin`
