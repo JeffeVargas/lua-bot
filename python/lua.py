@@ -3,14 +3,16 @@ import pyttsx3 as p
 import time
 from horario import hours
 from dia import day
+from crypto import findPriceCoin
 from clima import findcity
 import inspect
 
-keywords = ['dia', 'horas', 'clima']
+keywords = ['dia', 'horas', 'clima', 'preço']
 functions = {
     'dia': day,
     'horas': hours,
-    'clima': findcity
+    'clima': findcity,
+    'preço': findPriceCoin
 }
 
 remove = 'lua'
@@ -40,6 +42,7 @@ def tratamento(voice):
     call_command(trat_voice, remove_cmd)
 
 def call_command(trat_voice, remove_cmd):
+    print(trat_voice)
     for command in keywords:
         if command in trat_voice:
             select_key =  command
@@ -48,7 +51,7 @@ def call_command(trat_voice, remove_cmd):
             
             if arguments_length >= 1:
                 functions[select_key](remove_cmd)
-            elif arguments_length == 0:
+            if arguments_length == 0:
                 functions[select_key]()
             else:
                 talk('Comando não encontrado... Por favor, tente novamente')

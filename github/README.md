@@ -1,6 +1,6 @@
-<img align="right" src="./github/titulo_lua.png">
+<img align="center" src="./github/titulo_lua.png">
 
-<img align="right" src="./github/lua_branca_ico.png" alt="LUA_BOT">
+<img align="center" src="./github/lua_branca_ico.png" alt="LUA_BOT">
 
 <p align="center"> 
 
