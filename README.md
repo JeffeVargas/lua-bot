@@ -1,6 +1,6 @@
-<img align="center" src="./titulo_lua.png">
+<img align="center" src="./github/titulo_lua.png">
 
-<img align="center" src="./lua_branca_ico.png" alt="LUA_BOT">
+<img align="center" src="./github/lua_branca_ico.png" alt="LUA_BOT">
 
 <p align="center"> 
 
@@ -8,7 +8,7 @@ Hi, I'm <b>LUA!</b> and I'm your <b>personal assistent</b> that was developed to
 
 </p>
 
-<img src="./clima.gif" alt="Clima">
+<img src="./github/clima.gif" alt="Clima">
 
 <h1 align=left> <b>Feautures</b></h1>
 
@@ -43,7 +43,7 @@ Hi, I'm <b>LUA!</b> and I'm your <b>personal assistent</b> that was developed to
 2. Run `sudo apt-get install espeak`
 >Your problem should be solved.
 
-<img src="./requirements.gif" alt="INSTALATION">
+<img src="./github/requirements.gif" alt="INSTALATION">
 
 <h1 align=left> <b>Avaliable Commands:</b> </h1>
 
